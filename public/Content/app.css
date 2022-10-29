@@ -1,0 +1,93 @@
+@charset "UTF-8";
+body {
+    --line : #3f9de4;
+    --bg: #7ddde4;
+  
+    background: linear-gradient(135deg, var(--bg) 30%, transparent 30%) -50px 0,
+      linear-gradient(225deg, var(--bg) 25%, transparent 25%) -50px 0,
+      linear-gradient(315deg, var(--bg) 25%, transparent 25%),
+      linear-gradient(45deg, var(--bg) 25%, transparent 25%);
+    background-size: 100px 100px;
+    background-color: var(--line);
+  }
+#wrapper
+{
+    width: 960px;
+    height: 750px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(227, 208, 35);
+    color: rgba(15, 137, 156, 0.64);
+}
+#column
+{
+    float: none;
+    width: 960px;
+    height: 650px;
+    background-color: lightgray;
+
+}
+.box
+{
+    height: 245px; 
+    width: 400px;
+    float: left; 
+    background-color:rgb(239, 190, 126); 
+    margin: 30px; 
+    opacity:.5;
+    border: 3px solid rgb(91, 206, 255);
+    text-align: center;
+}
+#footer 
+{ 
+    height: 60px;
+    background-color: rgb(80, 191, 243);
+    text-align: center;
+}
+#banner h1
+{
+    color:rgb(174, 124, 37);
+}
+.box:hover 
+{ 
+    background-color:white; 
+    opacity:1; 
+}
+
+/*****************************************************************About ME *****************************************************************/
+header{
+    height: 55px;
+    background: rgb(125, 177, 198);
+    padding: 10px 0;
+    color: rgb(84, 94, 99);
+
+}
+header a{
+  color:#fff;
+  text-decoration: salmon;
+}
+header ul li {
+    display: inline-block;
+    margin-right: 15px;
+    padding: 15px 10px;
+}
+header ul{
+    text-align: right;
+}
+
+.logo img{
+    width:70px;
+}
+.logo{
+      float: left;
+}
+
+/*************************************************************Contact information*******************************************************/
+#form
+{
+    margin: 60px;
+    padding: 15px 15px;
+    border: 3px solid rgb(91, 206, 255);
+    background: rgb(60, 188, 243);
+    color:#fff;
+}
