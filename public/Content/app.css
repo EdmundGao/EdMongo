@@ -1,7 +1,7 @@
 @charset "UTF-8";
 body {
-    --line : #3f9de4;
-    --bg: #7ddde4;
+    --line : #506f86;
+    --bg: #7ca23a;
   
     background: linear-gradient(135deg, var(--bg) 30%, transparent 30%) -50px 0,
       linear-gradient(225deg, var(--bg) 25%, transparent 25%) -50px 0,
@@ -16,7 +16,7 @@ body {
     height: 750px;
     margin-left: auto;
     margin-right: auto;
-    background-color: rgb(227, 208, 35);
+    background-color: rgb(112, 220, 106);
     color: rgba(15, 137, 156, 0.64);
 }
 #column
@@ -80,14 +80,4 @@ header ul{
 }
 .logo{
       float: left;
-}
-
-/*************************************************************Contact information*******************************************************/
-#form
-{
-    margin: 60px;
-    padding: 15px 15px;
-    border: 3px solid rgb(91, 206, 255);
-    background: rgb(60, 188, 243);
-    color:#fff;
 }

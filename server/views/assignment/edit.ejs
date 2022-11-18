@@ -1,0 +1,71 @@
+<%- include ../partials/header.ejs %>
+<%- include ../partials/main_nav.ejs %>
+
+<div class= "container">
+    <div class= "row">
+        <div class="col-md-offset-3 col-md-6">
+            <h1>Edit Assignments</h1>
+            <form class="form" method= "post">
+                <div class="form-group">
+                    <label for= "courseTextField">Course</label>
+                    <input type= "text" class= "form-control"
+                    id="courseTextField"
+                    placeholder="Please enter your Course here"
+                    name="course" 
+                    value="<%= assignment.course %>"
+                    required>
+                </div>
+
+                <div class="form-group">
+                    <label for= "assignmentTextField">Assignments</label>
+                    <input type= "text" class= "form-control"
+                    id="assignmentTextField"
+                    placeholder="Please enter your assignment name here"
+                    name="assignment" 
+                    value="<%= assignment.assignment %>"
+                    required>
+                </div>
+
+                <div class="form-group">
+                    <label for= "worthTextField">Worth</label>
+                    <input type= "text" class= "form-control"
+                    id="worthTextField"
+                    placeholder="Please assignment worth"
+                    name="worth" 
+                    value="<%= assignment.worth %>"
+                    required>
+                </div>
+
+                <div class="form-group">
+                    <label for= "descTextField">Description</label>
+                    <textarea type= "text" class= "form-control"
+                    id="descTextField"
+                    placeholder="Please enter the description"
+                    name="description" required>
+                    <%= assignment.description %>
+                    </textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for= "dueTextField">Due</label>
+                    <input type= "number" class= "form-control"
+                    id="dueTextField"
+                    placeholder="Enter the Due in dmyyyy format"
+                    name="due" 
+                    value="<%= assignment.due %>"
+                    required>
+                </div>
+                    <br>
+                <button class="btn btn-success" type="submit">
+                    <i class="fas fa-edit"></i> Save
+                </button>
+            
+                <a href="/assignment-list" class="btn btn-warning">
+                    <i class="fas fa-undo"></i>Cancel</a>
+            </form>
+        </div>
+    </div>
+</div>
+
+<%- include ../partials/bottom_nav.ejs %>
+<%- include ../partials/footer.ejs %>

@@ -1,0 +1,48 @@
+<%- include ../partials/header.ejs %>
+<%- include ../partials/main_nav.ejs %>
+<main>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-offset-3 col-md-10">
+        <h1><%=title %></h1>
+        <a href= "/assignment-list/add" class="btn btn-primary" role="button">
+            <i class="fas fa-plus-circle"></i> Add a Assignment
+        </a>
+        <br>
+        <br>
+    <table class= "table table-bordered table-striped table-hover">
+    <tr class="flex">
+      <th class="text-center col-2">Course</th>
+      <th class="text-center col-2">Assignments</th>
+      <th class="text-center col-1">Assignment Worth</th>
+      <th class="text-center col-5">Description</th>
+      <th class="text-center col-1">Due(dmmyyyy)</th>
+      <th class="text-center col-1"></th>
+      <th class="text-center col-1"></th>
+    </tr>
+    <% for(let count=0; count<Assignmentlist.length; count++) {%>
+      <tr class="flex">
+          <td class="text-center col-2"><%= Assignmentlist[count].course %></td>
+          <td class="text-center col-2"><%= Assignmentlist[count].assignment %></td>
+          <td class="text-center col-1"><%= Assignmentlist[count].worth %></td>
+          <td class="text-center col-5"><%= Assignmentlist[count].description %></td>
+          <td class="text-center col-1"><%= Assignmentlist[count].due %></td>
+          <td class="text-center col-1">
+            <a href="/assignment-list/edit/<%= Assignmentlist[count]._id %>"
+              class="btn btn-primary">
+              <i class="fas fa-pencil-alt"></i> Edit </a>
+          </td>
+          <td class="text-center col-1">
+            <a href="/assignment-list/delete/<%= Assignmentlist[count]._id %>"
+              class="btn btn-danger">
+              <i class="fa-solid fa-trash"></i> Delete</a>
+          </td>
+      </tr>
+
+    <% } %>
+    </table>
+</div>
+</div>
+</main>
+<%- include ../partials/bottom_nav.ejs %>
+<%- include ../partials/footer.ejs %>
